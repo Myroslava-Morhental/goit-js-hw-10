@@ -29,7 +29,6 @@ function handleSubmitForm(event) {
     .then(delay => {
       iziToast.success({
         message: `✅ Fulfilled promise in ${delay}ms`,
-        ue,
         position: 'topRight',
       });
     })
