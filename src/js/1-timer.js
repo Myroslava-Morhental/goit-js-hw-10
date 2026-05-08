@@ -48,6 +48,7 @@ const fp = flatpickr(input, {
 
 function handleStartClick(event) {
   startBtn.disabled = true;
+  input.disabled = true;
 
   timerId = setInterval(() => {
     const currentTime = Date.now();
@@ -56,6 +57,7 @@ function handleStartClick(event) {
     if (deltaTime <= 0) {
       clearInterval(timerId);
       updateTimer(0);
+      input.disabled = false;
       return;
     }
     updateTimer(deltaTime);
